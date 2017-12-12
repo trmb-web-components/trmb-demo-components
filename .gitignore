@@ -1,0 +1,5 @@
+# UI Bower components
+bower_components
+web-components/@polymer
+web-components/@webcomponents
+yarn-error.log

@@ -1,0 +1,12 @@
+{
+  "name": "trmb-demo-components",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/trmbl-web-components/trmb-demo-components.git",
+  "author": "<balasuresh_varadharajan@trimble.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@polymer/polymer": "^2.3.1",
+    "@webcomponents/webcomponentsjs": "^1.0.20"
+  }
+}

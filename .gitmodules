@@ -1,0 +1,6 @@
+[submodule "web-components/trmb-css"]
+	path = web-components/trmb-css
+	url = https://github.com/trmbl-web-components/trmb-css.git
+[submodule "web-components/trmb-form"]
+	path = web-components/trmb-form
+	url = https://github.com/trmbl-web-components/trmb-form.git
