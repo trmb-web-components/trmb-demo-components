@@ -140,6 +140,14 @@
             background-color: #1779ba;
             color: #fefefe;
         }
+        
+        .code-description {
+            color: darkblue;
+        }
+        
+        .code-include {
+            color: darkcyan;
+        }
     </style>
 </head>
 
@@ -157,7 +165,7 @@
 
                     <div class="small-12 large-4 cell bg-3">
                         <div class="contents">
-                            <p><b>HTML Tags</b></p>
+                            <p><b>HTML Form Tags</b></p>
                             <code>
                     &lt;form&gt;<br />
                         &lt;label&gt;Input Label- OS&lt;/label&gt;<br />
@@ -171,7 +179,7 @@
                     </div>
                     <div class="small-12 large-4 cell bg-2">
                         <div class="contents">
-                            <p><b>form with default browser css</b></p>
+                            <p><b>Form with default css</b></p>
                             <trmb-dummy>
                                 <form>
                                     <label class="reset">Input Label- OS</label>
@@ -186,10 +194,46 @@
                     </div>
                     <div class="small-12 large-4 cell bg-1">
                         <div class="contents">
-                            <p><b>After applying our trimble css 'web-components/trmb-css/dist/css/form.min.css'</b></p>
+                            <p><b> Include form.css in your page. <br/> 'web-components/trmb-css/dist/css/form.min.css'</b></p>
                             <trmb-css-form>
                                 HI i am here only
                             </trmb-css-form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+        <li class="accordion-item" data-accordion-item>
+            <!-- Accordion tab title -->
+            <a href="#" class="accordion-title">User profile component</a>
+
+            <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
+            <div class="accordion-content" data-tab-content>
+
+                <div class="grid-x">
+                    <div class="small-12 large-4 cell bg-3">
+                        <div class="contents">
+                            <p class="code-description">
+                                <b>&lt;trmb-user-profile&gt;</b><br/> trmb-user-profile will display set of block with basic user information, contact, perference etc
+                                <br/><br/><br/><b> Usage Example:</b>
+                            </p>
+                            <code class="code-include">
+                                //Include web components loader and trmb-user-profile polymer component in your page <br/>
+                                &lt;script src="web-components/@webcomponents/webcomponentsjs/webcomponents-loader.js"&gt;&lt;/script&gt;<br/>
+                                &lt;link rel="import" href="web-components/trmb-form/formGroups/trmb-user-basic.html"&gt;  <br/>
+                                
+                            </code>
+                            <code class="code-description">
+                                //Put the tag in your page  <br/>
+                                <b>&lt;trmb-user-profile&gt;&lt;/trmb-user-profile&gt;</b>  <br/>
+                            </code>
+
+                        </div>
+                    </div>
+                    <div class="small-12 large-8 cell bg-2">
+                        <div class="contents">
+                            <trmb-user-profile></trmb-user-profile>
                         </div>
                     </div>
                 </div>
@@ -205,56 +249,25 @@
 
                     <div class="small-12 large-4 cell bg-3">
                         <div class="contents">
-                            <p><b>HTML Tag</b></p>
-                            <ul>
-                                <li>include the below scripts in your page </li>
-                                <code>
-                                            &lt;script src="web-components/@webcomponents/webcomponentsjs/webcomponents-loader.js"&gt;&lt;/script&gt;<br/> 
-                                            &lt;link rel="import" href="web-components/trmb-form/formGroups/trmb-user-basic.html"&gt;
-                                        </code>
-                                <li>Add the below web component in your page </li>
-                                <code>
-                                                <b>&lt;trmb-user-basic&gt;&lt;/trmb-user-basic&gt;</b>
-                                        </code>
-                            </ul>
+                            <p class="code-description">
+                                <b>&lt;trmb-user-basic&gt;</b><br/> trmb-user-basic will display set of fields with basic user information in single block
+                                <br/><br/><br/><b> Usage Example:</b>
+                            </p>
+                            <code class="code-include">
+                                //Include web components loader and trmb-user-basic polymer component in your page <br/>
+                                &lt;script src="web-components/@webcomponents/webcomponentsjs/webcomponents-loader.js"&gt;&lt;/script&gt;<br/>
+                                &lt;link rel="import" href="web-components/trmb-form/formGroups/trmb-user-basic.html"&gt;  <br/>
+                                
+                            </code>
+                            <code class="code-description">
+                                //Put the tag in your page  <br/>
+                                <b>&lt;trmb-user-basic&gt;&lt;/trmb-user-basic&gt;</b>  <br/>
+                            </code>
                         </div>
                     </div>
                     <div class="small-12 large-4 cell bg-2">
                         <div class="contents">
                             <trmb-user-basic form-data-string='{"firstName": "bala"}'></trmb-user-basic>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li class="accordion-item" data-accordion-item>
-            <!-- Accordion tab title -->
-            <a href="#" class="accordion-title">User profile component</a>
-
-            <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
-            <div class="accordion-content" data-tab-content>
-
-                <div class="grid-x">
-                    <div class="small-12 large-4 cell bg-3">
-                        <div class="contents">
-                            <p><b>HTML Tag</b></p>
-                            <ul>
-                                <li>include the below scripts in your page </li>
-                                <code>
-                        &lt;script src="web-components/@webcomponents/webcomponentsjs/webcomponents-loader.js"&gt;&lt;/script&gt;<br />
-                        &lt;link rel="import" href="web-components/trmb-form/trmb-user-profile.html"&gt;
-                    </code>
-                                <li>Add the below web component in your page </li>
-                                <code>
-                            <b>&lt;trmb-user-profile&gt;&lt;/trmb-user-profile&gt;</b>
-                    </code>
-                            </ul>
-
-                        </div>
-                    </div>
-                    <div class="small-12 large-8 cell bg-2">
-                        <div class="contents">
-                            <trmb-user-profile></trmb-user-profile>
                         </div>
                     </div>
                 </div>
@@ -268,27 +281,27 @@
             <div class="accordion-content" data-tab-content>
                 <div class="small-12 large-4 cell bg-3">
                     <div class="contents">
-                        <p><b>HTML Tag</b></p>
-                        <ul>
-                            <li>include the below scripts in your page </li>
-                            <code>
-                        &lt;script src="web-components/@webcomponents/webcomponentsjs/webcomponents-loader.js"&gt;&lt;/script&gt;<br />
-                        &lt;link rel="import" href="web-components/trmb-create-popup/trmb-create-popup.html"&gt;
-                    </code>
-                            <li>For create user popup </li>
-                            <code>
-                            
-                    <b>&lt;trmb-create-popup show-popup="false" type="user"&gt;&lt;/trmb-create-popup&gt;</b><br />
-                    </code>
-                            <li>For create company popup </li>
-                            <code>
-                            
-                    <b>&lt;trmb-create-popup show-popup="false" type="company"&gt;&lt;/trmb-create-popup&gt;</b><br />
-                    </code>
-                        </ul>
-
+                        <p class="code-description">
+                            <b>&lt;trmb-create-popup&gt;</b><br/> trmb-create-popup will open the popup with set of the fields base on the type attribute.
+                            <br/><br/><br/><b> Usage Example:</b>
+                        </p>
+                        <code class="code-include">
+                                //Include web components loader and trmb-user-basic polymer component in your page <br/>
+                                &lt;script src="web-components/@webcomponents/webcomponentsjs/webcomponents-loader.js"&gt;&lt;/script&gt;<br/>
+                                &lt;link rel="import" href="web-components/trmb-form/formGroups/trmb-user-basic.html"&gt;  <br/>
+                                
+                            </code>
+                        <code class="code-description">
+                                //For create user popup <br/>
+                                <b>&lt;trmb-create-popup show-popup="false" type="user"&gt;&lt;/trmb-create-popup&gt;</b><br />
+                            </code><br/>
+                        <code class="code-description">
+                                //For create company popup<br/>
+                                <b>&lt;trmb-create-popup show-popup="false" type="company"&gt;&lt;/trmb-create-popup&gt;</b><br />
+                            </code>
                     </div>
                 </div>
+                <br/>
                 <input type="button" value="Create user" class="button" onclick="showPopup('create-user-popup')" />
                 <input type="button" value="Create company" class="button" onclick="showPopup('create-company-popup')" />
                 <trmb-create-popup show-popup="false" type="user" id="create-user-popup"></trmb-create-popup>
@@ -303,19 +316,21 @@
             <div class="accordion-content" data-tab-content>
                 <div class="small-12 large-4 cell bg-3">
                     <div class="contents">
-                        <p><b>HTML Tag</b></p>
-                        <ul>
-                            <li>include the below scripts in your page </li>
-                            <code>
-                        &lt;script src="web-components/@webcomponents/webcomponentsjs/webcomponents-loader.js"&gt;&lt;/script&gt;<br />
-                        &lt;link rel="import" href="web-components/trmb-list-view/trmb-list-view.html"&gt;
-                    </code>
-                            <li>List view </li>
-                            <code>
-                            
-                    <b>&lt;trmb-list-view url="xxx" access-token="123"&gt;&lt;/trmb-list-view&gt;</b></br>
-                    </code>
-                        </ul>
+
+                        <p class="code-description">
+                            <b>&lt;trmb-list-view&gt;</b><br/> trmb-list-view will list set of the objects in the list view base on the type attribute.
+                            <br/><br/><br/><b> Usage Example:</b>
+                        </p>
+                        <code class="code-include">
+                                //Include web components loader and trmb-user-basic polymer component in your page <br/>
+                                &lt;script src="web-components/@webcomponents/webcomponentsjs/webcomponents-loader.js"&gt;&lt;/script&gt;<br/>
+                                &lt;link rel="import" href="web-components/trmb-form/formGroups/trmb-user-basic.html"&gt;  <br/>
+                                
+                            </code>
+                        <code class="code-description">
+                                //For list view <br/>
+                                <b>&lt;trmb-list-view url="xxx" access-token="123"&gt;&lt;/trmb-list-view&gt;</b></br>
+                            </code><br/>
 
                     </div>
                 </div>
