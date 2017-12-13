@@ -8,6 +8,7 @@
     <link rel="import" href="web-components/trmb-form/trmb-user-profile.html">
     <link rel="import" href="web-components/trmb-form/formGroups/trmb-user-basic.html">
     <link rel="import" href="web-components/trmb-create-popup/trmb-create-popup.html">
+    <link rel="import" href="web-components/trmb-list-view/trmb-list-view.html">
     <link rel="stylesheet" href="web-components/trmb-css/dist/css/xy-grid.min.css">
     <link rel="stylesheet" href="foundation/css/foundation.min.css">
     <script src="foundation/js/jquery.js" /></script>
@@ -277,12 +278,12 @@
                             <li>For create user popup </li>
                             <code>
                             
-                    &lt;trmb-create-popup show-popup="false" type="user"&gt;&lt;/trmb-create-popup&gt;<br />
+                    <b>&lt;trmb-create-popup show-popup="false" type="user"&gt;&lt;/trmb-create-popup&gt;</b><br />
                     </code>
                             <li>For create company popup </li>
                             <code>
                             
-                    &lt;trmb-create-popup show-popup="false" type="company"&gt;&lt;/trmb-create-popup&gt;<br />
+                    <b>&lt;trmb-create-popup show-popup="false" type="company"&gt;&lt;/trmb-create-popup&gt;</b><br />
                     </code>
                         </ul>
 
@@ -292,6 +293,33 @@
                 <input type="button" value="Create company" class="button" onclick="showPopup('create-company-popup')" />
                 <trmb-create-popup show-popup="false" type="user" id="create-user-popup"></trmb-create-popup>
                 <trmb-create-popup show-popup="false" type="company" id="create-company-popup"></trmb-create-popup>
+            </div>
+        </li>
+        <li class="accordion-item" data-accordion-item>
+            <!-- Accordion tab title -->
+            <a href="#" class="accordion-title">List view component</a>
+
+            <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
+            <div class="accordion-content" data-tab-content>
+                <div class="small-12 large-4 cell bg-3">
+                    <div class="contents">
+                        <p><b>HTML Tag</b></p>
+                        <ul>
+                            <li>include the below scripts in your page </li>
+                            <code>
+                        &lt;script src="web-components/@webcomponents/webcomponentsjs/webcomponents-loader.js"&gt;&lt;/script&gt;<br />
+                        &lt;link rel="import" href="web-components/trmb-list-view/trmb-list-view.html"&gt;
+                    </code>
+                            <li>List view </li>
+                            <code>
+                            
+                    <b>&lt;trmb-list-view url="xxx" access-token="123"&gt;&lt;/trmb-list-view&gt;</b></br>
+                    </code>
+                        </ul>
+
+                    </div>
+                </div>
+                <trmb-list-view get-url="https://profilexmock-7204.restdb.io/rest/px-users?sort=uuid&dir=-1" x-apikey="5a1e78707814ac5b3a05f49c"></trmb-list-view>
             </div>
         </li>
     </ul>
