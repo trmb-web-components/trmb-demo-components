@@ -4,3 +4,6 @@
 [submodule "web-components/trmb-form"]
 	path = web-components/trmb-form
 	url = https://github.com/trmbl-web-components/trmb-form.git
+[submodule "web-components/trmb-create-popup"]
+	path = web-components/trmb-create-popup
+	url = https://github.com/trmbl-web-components/trmb-create-popup.git

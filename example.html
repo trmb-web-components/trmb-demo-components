@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="web-components/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <link rel="import" href="web-components/trmb-form/trmb-form.html">
+    <link rel="import" href="web-components/trmb-form/formGroups/trmb-user-basic.html">
+    <link rel="stylesheet" href="web-components/trmb-css/dist/css/xy-grid.min.css">
+</head>
+
+<body>
+
+
+
+    <h1> User defined form</h1>
+    <div class="grid-x">
+        <div class="small-6 cell" style="background-color: #f9f9f9;">
+            <code>
+                &lt;trmb-form&gt;<br />
+                    &lt;form&gt;<br />
+                        &lt;label&gt;Input Label- OS&lt;/label&gt;<br />
+                        &lt;input type="text" placeholder=".medium-6.cell"&gt;&lt;/br&gt;<br />
+                        &lt;label&gt;Input Label - OS&lt;/label&gt;<br />
+                        &lt;input type="text" placeholder=".medium-6.cell"&gt;<br />
+                    &lt;/form&gt;<br />
+                &lt;/trmb-form&gt;
+            </code>
+        </div>
+        <div class="small-6 cell">
+            <div class="grid-x">
+                <trmb-form>
+                    <form>
+                        <label>Input Label- OS</label>
+                        <input type="text" placeholder=".medium-6.cell"></br>
+                        <label>Input Label - OS</label>
+                        <input type="text" placeholder=".medium-6.cell">
+                        <input type="button" value="submit">
+                    </form>
+                </trmb-form>
+            </div>
+        </div>
+    </div>
+    <h1> Tpaas no form</h1>
+    <div class="grid-x">
+        <div class="small-6 cell" style="background-color: #f9f9f9;">
+            <code>
+                    &lt;trmb-form&gt;&lt;/trmb-form&gt;
+            </code>
+        </div>
+        <div class="small-6 cell">
+            <trmb-form></trmb-form>
+        </div>
+    </div>
+    <h1> Tpaas invalid form</h1>
+    <div class="grid-x">
+        <div class="small-6 cell" style="background-color: #f9f9f9;">
+            <code>
+                    &lt;trmb-form form-type="company"&gt;&lt;/trmb-form&gt;
+            </code>
+        </div>
+        <div class="small-6 cell">
+            <trmb-form form-type="company"></trmb-form>
+        </div>
+    </div>
+    <h1> Tpaas basic form</h1>
+    <div class="grid-x">
+        <div class="small-6 cell" style="background-color: #f9f9f9;">
+            <code>
+                    &lt;trmb-user-basic&gt;&lt;/trmb-user-basic&gt;
+            </code>
+        </div>
+        <div class="small-6 cell">
+            <trmb-user-basic form-data-string='{"firstName": "bala"}'></trmb-user-basic>
+        </div>
+    </div>
+    <!--h1> Tpaas basic and prefernce form</h1>
+    <div class="grid-x">
+        <div class="small-6 cell" style="background-color: #f9f9f9;">
+            <code>
+                    &lt;trmb-form form-type="user-basic"&gt;&lt;/trmb-form&gt;
+            </code>
+        </div>
+        <div class="small-6 cell">
+            <trmb-form form-type="user-basic"></trmb-form>
+        </div>
+    </div !-->
+    <h1> Tpaas user form</h1>
+    <div class="grid-x">
+        <div class="small-6 cell" style="background-color: #f9f9f9;">
+            <code>
+                    &lt;trmb-form form-type="user-profile"&gt;&lt;/trmb-form&gt;
+            </code>
+        </div>
+        <div class="small-6 cell">
+            <trmb-form form-type="user-profile"></trmb-form>
+        </div>
+    </div>
+</body>
+
+
+</html>
