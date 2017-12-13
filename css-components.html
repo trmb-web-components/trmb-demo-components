@@ -3,12 +3,13 @@
 
 <head>
     <script src="web-components/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-    <link rel="import" href="web-components/trmb-form/trmb-form.html">
+    <link rel="import" href="web-components/trmb-form/trmb-user-profile.html">
     <link rel="import" href="web-components/trmb-form/formGroups/trmb-user-basic.html">
     <link rel="stylesheet" href="web-components/trmb-css/dist/css/xy-grid.min.css">
     <style>
-        html, body{
-             width: 100%;
+        html,
+        body {
+            width: 100%;
             height: 100%;
             padding: 0;
             margin: 0;
@@ -16,8 +17,9 @@
             font-size: 14px;
             color: #363545;
             background: #F3F3F7;
-        box-sizing: border-box;     
+            box-sizing: border-box;
         }
+        
         .demo-top-bar {
             background: #fff;
             height: 50px;
@@ -26,19 +28,24 @@
             padding: 13px 10px 0 20px;
             box-sizing: border-box;
         }
-        h1{
+        
+        h1 {
             font-size: 16px;
         }
-        .bg-1{
-            background-color: #EAEAEF;            
+        
+        .bg-1 {
+            background-color: #EAEAEF;
         }
-        .bg-2{
-            background-color: #E2E2E7;           
+        
+        .bg-2 {
+            background-color: #E2E2E7;
         }
-        .bg-3{
-            background-color: #D0D0D7;            
+        
+        .bg-3 {
+            background-color: #D0D0D7;
         }
-        .content{
+        
+        .content {
             padding: 15px;
         }
     </style>
@@ -46,18 +53,18 @@
 
 <body>
     <div class="demo-top-bar">Trimble Components Library</div>
-    
-    
+
+
     <div class="grid-container fluid">
-    <div class="grid-x grid-margin-x">
-        <div class="cell large-12">
-            <h1> User defined form</h1>
-            
-        </div>        
-        <div class="small-12 large-4 cell bg-3">
-            <div class="content">
-            <p><b>When we include 'web-components/trmb-css/dist/css/form.min.css'</b></p>
-            <code>
+        <div class="grid-x">
+            <div class="cell large-12">
+                <h1> Normal form</h1>
+
+            </div>
+            <div class="small-12 large-4 cell bg-3">
+                <div class="content">
+                    <p><b>HTML Tags</b></p>
+                    <code>
                     &lt;form&gt;<br />
                         &lt;label&gt;Input Label- OS&lt;/label&gt;<br />
                         &lt;input type="text" placeholder=".medium-6.cell"&gt;&lt;/br&gt;<br />
@@ -66,11 +73,11 @@
                         &lt;input type="button" value="submit"&gt;<br />
                     &lt;/form&gt;
             </code>
+                </div>
             </div>
-        </div>
-        <div class="small-12 large-4 cell bg-2">
-            <div class="content">
-            <p><b>When we include 'web-components/trmb-css/dist/css/form.min.css'</b></p>
+            <div class="small-12 large-4 cell bg-2">
+                <div class="content">
+                    <p><b>form in with default browser css</b></p>
                     <form>
                         <label>Input Label- OS</label>
                         <input type="text" placeholder=".medium-6.cell"></br>
@@ -78,11 +85,11 @@
                         <input type="text" placeholder=".medium-6.cell">
                         <input type="button" value="submit">
                     </form>
-                    </div>
-        </div>
-        <div class="small-12 large-4 cell bg-1">
-            <div class="content">
-           <p><b>When we include 'web-components/trmb-css/dist/css/form.min.css'</b></p>
+                </div>
+            </div>
+            <div class="small-12 large-4 cell bg-1">
+                <div class="content">
+                    <p><b>After applying our trimble css 'web-components/trmb-css/dist/css/form.min.css'</b></p>
                     <trmb-form>
                         <label>Input Label- OS</label>
                         <input type="text" placeholder=".medium-6.cell"></br>
@@ -90,9 +97,62 @@
                         <input type="text" placeholder=".medium-6.cell">
                         <input type="button" value="submit">
                     </trmb-form>
-                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-x">
+            <div class="cell large-12">
+                <h1> Trimble user basic information components</h1>
+            </div>
+            <div class="small-12 large-4 cell bg-3">
+                <div class="content">
+                    <p><b>HTML Tag</b></p>
+
+                    <li>include the below scripts in your page </li>
+                    <code>
+                        &lt;script src="web-components/@webcomponents/webcomponentsjs/webcomponents-loader.js"&gt;&lt;/script&gt;<br/> 
+                        &lt;link rel="import" href="web-components/trmb-form/formGroups/trmb-user-basic.html"&gt;
+                    </code>
+                    <li>Add the below web component in your page </li>
+                    <code>
+                            &lt;trmb-user-basic&gt;&lt;/trmb-user-basic&gt;
+                    </code>
+                    </p>
+                </div>
+            </div>
+            <div class="small-12 large-4 cell bg-2">
+                <div class="content">
+                    <trmb-user-basic form-data-string='{"firstName": "bala"}'></trmb-user-basic>
+                </div>
+            </div>
+        </div>
+        <div class="grid-x">
+            <div class="cell large-12">
+                <h1> Trimble user profile components</h1>
+            </div>
+            <div class="small-12 large-4 cell bg-3">
+                <div class="content">
+                    <p><b>HTML Tag</b></p>
+
+                    <li>include the below scripts in your page </li>
+                    <code>
+                        &lt;script src="web-components/@webcomponents/webcomponentsjs/webcomponents-loader.js"&gt;&lt;/script&gt;<br />
+                        &lt;link rel="import" href="web-components/trmb-form/trmb-form.html"&gt;
+                    </code>
+                    <li>Add the below web component in your page </li>
+                    <code>
+                            &lt;trmb-user-profile&gt;&lt;/trmb-user-profile&gt;
+                    </code>
+                    </p>
+                </div>
+            </div>
+            <div class="small-12 large-8 cell bg-2">
+                <div class="content">
+                    <trmb-user-profile></trmb-user-profile>
+                </div>
+            </div>
         </div>
     </div>
-    </div>
-    </body>
-    </html>
+</body>
+
+</html>
