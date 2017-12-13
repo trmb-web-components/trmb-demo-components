@@ -4,6 +4,8 @@
 <head>
     <script src="web-components/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <link rel="import" href="web-components/trmb-form/trmb-user-profile.html">
+    <link rel="import" href="web-components/trmb-form/trmb-form.html">
+    <link rel="import" href="web-components/trmb-form/trmb-dummy.html">
     <link rel="import" href="web-components/trmb-form/formGroups/trmb-user-basic.html">
     <link rel="stylesheet" href="web-components/trmb-css/dist/css/xy-grid.min.css">
     <style>
@@ -78,24 +80,29 @@
             <div class="small-12 large-4 cell bg-2">
                 <div class="content">
                     <p><b>form in with default browser css</b></p>
-                    <form>
-                        <label>Input Label- OS</label>
-                        <input type="text" placeholder=".medium-6.cell"></br>
-                        <label>Input Label - OS</label>
-                        <input type="text" placeholder=".medium-6.cell">
-                        <input type="button" value="submit">
-                    </form>
+                    <trmb-dummy>
+                        <form>
+                            <label class="reset">Input Label- OS</label>
+                            <input type="text" placeholder=".medium-6.cell" class="reset"></br>
+                            <label class="reset">Input Label - OS</label>
+                            <input type="text" placeholder=".medium-6.cell" class="reset">
+                            <input type="button" value="submit" class="reset">
+                        </form>
+
+                    </trmb-dummy>
                 </div>
             </div>
             <div class="small-12 large-4 cell bg-1">
                 <div class="content">
                     <p><b>After applying our trimble css 'web-components/trmb-css/dist/css/form.min.css'</b></p>
                     <trmb-form>
-                        <label>Input Label- OS</label>
-                        <input type="text" placeholder=".medium-6.cell"></br>
-                        <label>Input Label - OS</label>
-                        <input type="text" placeholder=".medium-6.cell">
-                        <input type="button" value="submit">
+                        <form>
+                            <label>Input Label- OS</label>
+                            <input type="text" placeholder=".medium-6.cell"></br>
+                            <label>Input Label - OS</label>
+                            <input type="text" placeholder=".medium-6.cell">
+                            <input type="button" value="submit">
+                        </form>
                     </trmb-form>
                 </div>
             </div>
