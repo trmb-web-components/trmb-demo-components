@@ -1,0 +1,12 @@
+[submodule "web-components/trmb-list-view"]
+	path = web-components/trmb-list-view
+	url = https://github.com/trmbl-web-components/trmb-list-view.git
+[submodule "web-components/trmb-css"]
+	path = web-components/trmb-css
+	url = https://github.com/trmbl-web-components/trmb-css.git
+[submodule "web-components/trmb-create-popup"]
+	path = web-components/trmb-create-popup
+	url = https://github.com/trmbl-web-components/trmb-create-popup.git
+[submodule "web-components/trmb-form"]
+	path = web-components/trmb-form
+	url = https://github.com/trmbl-web-components/trmb-form.git
