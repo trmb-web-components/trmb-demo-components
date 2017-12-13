@@ -8,6 +8,9 @@
     <link rel="import" href="web-components/trmb-form/trmb-dummy.html">
     <link rel="import" href="web-components/trmb-form/formGroups/trmb-user-basic.html">
     <link rel="stylesheet" href="web-components/trmb-css/dist/css/xy-grid.min.css">
+    <link rel="stylesheet" href="foundation/css/foundation.min.css">
+     <script src="foundation/js/jquery.js" /></script>
+    <script src="foundation/js/foundation.min.js" /></script>
     <style>
         html,
         body {
@@ -15,7 +18,7 @@
             height: 100%;
             padding: 0;
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'Open Sans';
             font-size: 14px;
             color: #363545;
             background: #F3F3F7;
@@ -47,24 +50,73 @@
             background-color: #D0D0D7;
         }
         
-        .content {
+        .contents {
             padding: 15px;
         }
+        
+        .accordion {
+            margin-left: 0;
+            padding: 0;
+            background: #fefefe;
+            list-style-type: none; }
+            .accordion[disabled] .accordion-title {
+                cursor: not-allowed; }
+
+            .accordion-item:first-child > :first-child {
+            border-radius: 3px 3px 0 0; }
+
+            .accordion-item:last-child > :last-child {
+            border-radius: 0 0 3px 3px; }
+
+            .accordion-title {
+            position: relative;
+            display: block;
+            padding: 1.25rem 1rem;
+            border: 1px solid #e6e6e6;
+            border-bottom: 0;
+            font-size: 0.75rem;
+            line-height: 1;
+            color: #2ba6cb; }
+            :last-child:not(.is-active) > .accordion-title {
+                border-bottom: 1px solid #e6e6e6;
+                border-radius: 0 0 3px 3px; }
+            .accordion-title:hover, .accordion-title:focus {
+                background-color: #e6e6e6; }
+            .accordion-title::before {
+                position: absolute;
+                top: 50%;
+                right: 1rem;
+                margin-top: -0.5rem;
+                content: '+'; }
+            .is-active > .accordion-title::before {
+                content: '\2013'; }
+
+            .accordion-content {
+            display: none;
+            padding: 1rem;
+            border: 1px solid #e6e6e6;
+            border-bottom: 0;
+            background-color: #fefefe;
+            color: #0a0a0a; }
+            :last-child > .accordion-content:last-child {
+                border-bottom: 1px solid #e6e6e6; }
     </style>
 </head>
 
 <body>
     <div class="demo-top-bar">Trimble Components Library</div>
+    
+        <ul class="accordion" data-accordion>
+            <li class="accordion-item" data-accordion-item>
+                <!-- Accordion tab title -->
+                <a href="#" class="accordion-title"><h1> Normal form</h1></a>
 
+                <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
+                <div class="accordion-content" data-tab-content>
+                                <div class="grid-x">
 
-    <div class="grid-container fluid">
-        <div class="grid-x">
-            <div class="cell large-12">
-                <h1> Normal form</h1>
-
-            </div>
             <div class="small-12 large-4 cell bg-3">
-                <div class="content">
+                <div class="contents">
                     <p><b>HTML Tags</b></p>
                     <code>
                     &lt;form&gt;<br />
@@ -78,7 +130,7 @@
                 </div>
             </div>
             <div class="small-12 large-4 cell bg-2">
-                <div class="content">
+                <div class="contents">
                     <p><b>form in with default browser css</b></p>
                     <trmb-dummy>
                         <form>
@@ -93,7 +145,7 @@
                 </div>
             </div>
             <div class="small-12 large-4 cell bg-1">
-                <div class="content">
+                <div class="contents">
                     <p><b>After applying our trimble css 'web-components/trmb-css/dist/css/form.min.css'</b></p>
                     <trmb-form>
                         <form>
@@ -107,40 +159,52 @@
                 </div>
             </div>
         </div>
-        <div class="grid-x">
-            <div class="cell large-12">
-                <h1> Trimble user basic information components</h1>
-            </div>
-            <div class="small-12 large-4 cell bg-3">
-                <div class="content">
-                    <p><b>HTML Tag</b></p>
-
-                    <li>include the below scripts in your page </li>
-                    <code>
-                        &lt;script src="web-components/@webcomponents/webcomponentsjs/webcomponents-loader.js"&gt;&lt;/script&gt;<br/> 
-                        &lt;link rel="import" href="web-components/trmb-form/formGroups/trmb-user-basic.html"&gt;
-                    </code>
-                    <li>Add the below web component in your page </li>
-                    <code>
-                            &lt;trmb-user-basic&gt;&lt;/trmb-user-basic&gt;
-                    </code>
-                    </p>
                 </div>
-            </div>
-            <div class="small-12 large-4 cell bg-2">
-                <div class="content">
+            </li>
+            <li class="accordion-item" data-accordion-item>
+                <!-- Accordion tab title -->
+                <a href="#" class="accordion-title"><h1> Trimble user basic information components</h1></a>
+
+                <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
+                <div class="accordion-content" data-tab-content>
+                        <div class="grid-x">
+
+                                    <div class="small-12 large-4 cell bg-3">
+                                    <div class="contents">
+                                        <p><b>HTML Tag</b></p>
+                                        <ul>
+                                        <li>include the below scripts in your page </li>
+                                        <code>
+                                            &lt;script src="web-components/@webcomponents/webcomponentsjs/webcomponents-loader.js"&gt;&lt;/script&gt;<br/> 
+                                            &lt;link rel="import" href="web-components/trmb-form/formGroups/trmb-user-basic.html"&gt;
+                                        </code>
+                                        <li>Add the below web component in your page </li>
+                                        <code>
+                                                &lt;trmb-user-basic&gt;&lt;/trmb-user-basic&gt;
+                                        </code>
+                                        </ul>
+                                    </div>
+                                </div>
+                                     <div class="small-12 large-4 cell bg-2">
+                <div class="contents">
                     <trmb-user-basic form-data-string='{"firstName": "bala"}'></trmb-user-basic>
                 </div>
             </div>
-        </div>
-        <div class="grid-x">
-            <div class="cell large-12">
-                <h1> Trimble user profile components</h1>
-            </div>
-            <div class="small-12 large-4 cell bg-3">
-                <div class="content">
-                    <p><b>HTML Tag</b></p>
+                        </div>
+                </div>
+            </li>
+            <li class="accordion-item" data-accordion-item>
+                <!-- Accordion tab title -->
+                <a href="#" class="accordion-title"><h1> Trimble user profile components</h1></a>
 
+                <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
+                <div class="accordion-content" data-tab-content>
+                        
+        <div class="grid-x">
+            <div class="small-12 large-4 cell bg-3">
+                <div class="contents">
+                    <p><b>HTML Tag</b></p>
+                     <ul>   
                     <li>include the below scripts in your page </li>
                     <code>
                         &lt;script src="web-components/@webcomponents/webcomponentsjs/webcomponents-loader.js"&gt;&lt;/script&gt;<br />
@@ -150,16 +214,28 @@
                     <code>
                             &lt;trmb-user-profile&gt;&lt;/trmb-user-profile&gt;
                     </code>
-                    </p>
+                     </ul>
+                    
                 </div>
             </div>
             <div class="small-12 large-8 cell bg-2">
-                <div class="content">
+                <div class="contents">
                     <trmb-user-profile></trmb-user-profile>
                 </div>
             </div>
         </div>
-    </div>
+                </div>
+            </li>
+            <!-- ... -->
+        </ul>
+
+
 </body>
+
+    <script>
+        $(document).ready(function(){
+            $(document).foundation(); 
+        });
+     </script>
 
 </html>
