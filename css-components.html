@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="web-components/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <link rel="import" href="web-components/trmb-form/trmb-form.html">
+    <link rel="import" href="web-components/trmb-form/formGroups/trmb-user-basic.html">
+    <link rel="stylesheet" href="web-components/trmb-css/dist/css/xy-grid.min.css">
+    <style>
+        html, body{
+             width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            color: #363545;
+            background: #F3F3F7;
+        box-sizing: border-box;     
+        }
+        .demo-top-bar {
+            background: #fff;
+            height: 50px;
+            font-weight: 600;
+            font-size: 20px;
+            padding: 13px 10px 0 20px;
+            box-sizing: border-box;
+        }
+        h1{
+            font-size: 16px;
+        }
+        .bg-1{
+            background-color: #EAEAEF;            
+        }
+        .bg-2{
+            background-color: #E2E2E7;           
+        }
+        .bg-3{
+            background-color: #D0D0D7;            
+        }
+        .content{
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="demo-top-bar">Trimble Components Library</div>
+    
+    
+    <div class="grid-container fluid">
+    <div class="grid-x grid-margin-x">
+        <div class="cell large-12">
+            <h1> User defined form</h1>
+            
+        </div>        
+        <div class="small-12 large-4 cell bg-3">
+            <div class="content">
+            <p><b>When we include 'web-components/trmb-css/dist/css/form.min.css'</b></p>
+            <code>
+                    &lt;form&gt;<br />
+                        &lt;label&gt;Input Label- OS&lt;/label&gt;<br />
+                        &lt;input type="text" placeholder=".medium-6.cell"&gt;&lt;/br&gt;<br />
+                        &lt;label&gt;Input Label - OS&lt;/label&gt;<br />
+                        &lt;input type="text" placeholder=".medium-6.cell"&gt;<br />
+                        &lt;input type="button" value="submit"&gt;<br />
+                    &lt;/form&gt;
+            </code>
+            </div>
+        </div>
+        <div class="small-12 large-4 cell bg-2">
+            <div class="content">
+            <p><b>When we include 'web-components/trmb-css/dist/css/form.min.css'</b></p>
+                    <form>
+                        <label>Input Label- OS</label>
+                        <input type="text" placeholder=".medium-6.cell"></br>
+                        <label>Input Label - OS</label>
+                        <input type="text" placeholder=".medium-6.cell">
+                        <input type="button" value="submit">
+                    </form>
+                    </div>
+        </div>
+        <div class="small-12 large-4 cell bg-1">
+            <div class="content">
+           <p><b>When we include 'web-components/trmb-css/dist/css/form.min.css'</b></p>
+                    <trmb-form>
+                        <label>Input Label- OS</label>
+                        <input type="text" placeholder=".medium-6.cell"></br>
+                        <label>Input Label - OS</label>
+                        <input type="text" placeholder=".medium-6.cell">
+                        <input type="button" value="submit">
+                    </trmb-form>
+                    </div>
+        </div>
+    </div>
+    </div>
+    </body>
+    </html>
