@@ -157,7 +157,7 @@
     <ul class="accordion" data-accordion data-allow-all-closed="true">
         <li class="accordion-item" data-accordion-item>
             <!-- Accordion tab title -->
-            <a href="#" class="accordion-title">CSS Component</a>
+            <a href="#" class="accordion-title" onclick="loadSlot()">CSS Component</a>
 
             <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
             <div class="accordion-content" data-tab-content>
@@ -195,9 +195,39 @@
                     <div class="small-12 large-4 cell bg-1">
                         <div class="contents">
                             <p><b> Include form.css in your page. <br/> 'web-components/trmb-css/dist/css/form.min.css'</b></p>
-                            <trmb-css-form>
-                                HI i am here only
+                            <trmb-css-form id="user-custom-form">
+                                <form>
+                                    <label class="reset">Input Label- OS</label>
+                                    <input type="text" placeholder=".medium-6.cell" class="reset"></br>
+                                    <label class="reset">Input Label - OS</label>
+                                    <input type="text" placeholder=".medium-6.cell" class="reset">
+                                    <input type="button" value="submit" class="reset">
+                                </form>
                             </trmb-css-form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+        <li class="accordian-item" data-accordion-item>
+
+            <a href="#" class="accordion-title">Pre-defined configuration</a>
+            <div class="accordion-content" data-tab-content>
+                <div class="grid-x">
+                    <div class="small-12 large-4 cell bg-2">
+                        <div class="contents">
+                            <p><b>Form with default css</b></p>
+                            <trmb-dummy>
+                                <form>
+                                    <label class="reset">Input Label- OS</label>
+                                    <input type="text" placeholder=".medium-6.cell" class="reset"></br>
+                                    <label class="reset">Input Label - OS</label>
+                                    <input type="text" placeholder=".medium-6.cell" class="reset">
+                                    <input type="button" value="submit" class="reset">
+                                </form>
+
+                            </trmb-dummy>
                         </div>
                     </div>
                 </div>
@@ -346,6 +376,16 @@
     $(document).ready(function() {
         $(document).foundation();
     });
+
+    function loadSlot() {
+        var ls_value = document.getElementById('user-custom-form').getAttribute('load-slot');
+        console.log(ls_value);
+        if (undefined == ls_value || 'false' == ls_value) {
+            document.getElementById('user-custom-form').setAttribute('load-slot', 'true');
+        } else {
+            document.getElementById('user-custom-form').setAttribute('load-slot', 'false');
+        }
+    }
 
     function showPopup(elem) {
         console.log(elem);
