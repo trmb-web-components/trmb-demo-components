@@ -7,6 +7,7 @@
     <link rel="import" href="web-components/trmb-form/trmb-css-form.html">
     <link rel="import" href="web-components/trmb-form/trmb-user-profile.html">
     <link rel="import" href="web-components/trmb-form/formGroups/trmb-user-basic.html">
+    <link rel="import" href="web-components/trmb-form/formGroups/trmb-company-profile.html">
     <link rel="import" href="web-components/trmb-create-popup/trmb-create-popup.html">
     <link rel="import" href="web-components/trmb-list-view/trmb-list-view.html">
     <link rel="stylesheet" href="web-components/trmb-css/dist/css/xy-grid.min.css">
@@ -157,7 +158,7 @@
     <ul class="accordion" data-accordion data-allow-all-closed="true">
         <li class="accordion-item" data-accordion-item>
             <!-- Accordion tab title -->
-            <a href="#" class="accordion-title" onclick="loadSlot()">CSS Component</a>
+            <a href="#" class="accordion-title" onclick="loadSlot('user-custom-form')">CSS Component</a>
 
             <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
             <div class="accordion-content" data-tab-content>
@@ -165,7 +166,7 @@
 
                     <div class="small-12 large-4 cell bg-3">
                         <div class="contents">
-                            <p><b>HTML Form Tags</b></p>
+                            <p class="code-description"><b>HTML Form Tags</b></p>
                             <code>
                     &lt;form&gt;<br />
                         &lt;label&gt;Input Label- OS&lt;/label&gt;<br />
@@ -179,14 +180,14 @@
                     </div>
                     <div class="small-12 large-4 cell bg-2">
                         <div class="contents">
-                            <p><b>Form with default css</b></p>
+                            <p class="code-description"><b>Form with default css</b></p>
                             <trmb-dummy>
                                 <form>
-                                    <label class="reset">Input Label- OS</label>
-                                    <input type="text" placeholder=".medium-6.cell" class="reset"></br>
-                                    <label class="reset">Input Label - OS</label>
-                                    <input type="text" placeholder=".medium-6.cell" class="reset">
-                                    <input type="button" value="submit" class="reset">
+                                    <label>Input Label- OS</label>
+                                    <input type="text" placeholder=".medium-6.cell"></br>
+                                    <label>Input Label - OS</label>
+                                    <input type="text" placeholder=".medium-6.cell">
+                                    <input type="button" value="submit">
                                 </form>
 
                             </trmb-dummy>
@@ -194,14 +195,14 @@
                     </div>
                     <div class="small-12 large-4 cell bg-1">
                         <div class="contents">
-                            <p><b> Include form.css in your page. <br/> 'web-components/trmb-css/dist/css/form.min.css'</b></p>
+                            <p class="code-description"><b> Include form.css in your page. <br/> 'web-components/trmb-css/dist/css/form.min.css'</b></p>
                             <trmb-css-form id="user-custom-form">
                                 <form>
-                                    <label class="reset">Input Label- OS</label>
-                                    <input type="text" placeholder=".medium-6.cell" class="reset"></br>
-                                    <label class="reset">Input Label - OS</label>
-                                    <input type="text" placeholder=".medium-6.cell" class="reset">
-                                    <input type="button" value="submit" class="reset">
+                                    <label>Input Label- OS</label>
+                                    <input type="text" placeholder=".medium-6.cell"></br>
+                                    <label>Input Label - OS</label>
+                                    <input type="text" placeholder=".medium-6.cell">
+                                    <input type="button" value="submit">
                                 </form>
                             </trmb-css-form>
                         </div>
@@ -210,27 +211,76 @@
             </div>
         </li>
 
-        <li class="accordian-item" data-accordion-item>
+        <!--li class="accordian-item" data-accordion-item>
 
-            <a href="#" class="accordion-title">Pre-defined configuration</a>
+            <a href="#" class="accordion-title" onclick="loadSlot('user-custom-form1')">Pre-defined configuration</a>
             <div class="accordion-content" data-tab-content>
                 <div class="grid-x">
-                    <div class="small-12 large-4 cell bg-2">
+                    <div class="small-12 large-6 cell bg-2">
                         <div class="contents">
-                            <p><b>Form with default css</b></p>
-                            <trmb-dummy>
+                            <trmb-css-form id="user-custom-form1">
                                 <form>
-                                    <label class="reset">Input Label- OS</label>
-                                    <input type="text" placeholder=".medium-6.cell" class="reset"></br>
-                                    <label class="reset">Input Label - OS</label>
-                                    <input type="text" placeholder=".medium-6.cell" class="reset">
-                                    <input type="button" value="submit" class="reset">
+                                    <label>API Url:</label>
+                                    <input type="text" value="" id="api-url"></br>
+
+                                    <label>Tpaas access token</label>
+                                    <input type="text" value="" id="access-token"></br>
+                                    <label>API Url 2:</label>
+                                    <input type="text" value="" id="api-url2"></br>
+                                    <label>X-Api Token:</label>
+                                    <input type="text" value="" id="x-apikey"></br>
+                                    <label>Which api:</label>
+                                    <select id="api-source">
+                                        <option value="profilex-mock">Profilex Mock</option>
+                                        <option value="profilex">Profilex</option>
+                                    </select>
+                                    <label>User trn id</label>
+                                    <input type="text" value="" id="user-trn-id">
+                                    <label>Company trn id</label>
+                                    <input type="text" value="" id="company-trn-id">
+                                    <input type="button" value="Update" onclick="changeConfig()">
                                 </form>
 
-                            </trmb-dummy>
+                            </trmb-css-form>
                         </div>
                     </div>
                 </div>
+            </div>
+        </li!-->
+
+        <li class="accordion-item" data-accordion-item>
+            <!-- Accordion tab title -->
+            <a href="#" class="accordion-title">Create popup component</a>
+
+            <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
+            <div class="accordion-content" data-tab-content>
+                <div class="small-12 large-4 cell bg-3">
+                    <div class="contents">
+                        <p class="code-description">
+                            <b>&lt;trmb-create-popup&gt;</b><br/> trmb-create-popup will open the popup with set of the fields base on the type attribute.
+                            <br/><br/><br/><b> Usage Example:</b>
+                        </p>
+                        <code class="code-include">
+                                //Include web components loader and trmb-create-popup polymer component in your page <br/>
+                                &lt;script src="web-components/@webcomponents/webcomponentsjs/webcomponents-loader.js"&gt;&lt;/script&gt;<br/>
+                                &lt;link rel="import" href="web-components/trmb-create-popup/trmb-create-popup.html"&gt;  <br/>
+                                
+                            </code>
+                        <code class="code-description">
+                                //For create user popup <br/>
+                                <b>&lt;trmb-create-popup show-popup="false" type="user"&gt;&lt;/trmb-create-popup&gt;</b><br />
+                            </code><br/>
+                        <code class="code-description">
+                                //For create company popup<br/>
+                                <b>&lt;trmb-create-popup show-popup="false" type="company"&gt;&lt;/trmb-create-popup&gt;</b><br />
+                            </code>
+                    </div>
+                </div>
+                <br/>
+                <input type="button" value="Create user" class="button" onclick="showPopup('create-user-popup')" />
+                <input type="button" value="Create company" class="button" onclick="showPopup('create-company-popup')" />
+                <trmb-create-popup show-popup="false" type="user" id="create-user-popup" access-token=""></trmb-create-popup>
+                <trmb-create-popup show-popup="false" type="company" id="create-company-popup"></trmb-create-popup>
             </div>
         </li>
 
@@ -303,41 +353,42 @@
                 </div>
             </div>
         </li>
+
         <li class="accordion-item" data-accordion-item>
             <!-- Accordion tab title -->
-            <a href="#" class="accordion-title">Create popup component</a>
+            <a href="#" class="accordion-title">Company profile component</a>
 
             <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
             <div class="accordion-content" data-tab-content>
-                <div class="small-12 large-4 cell bg-3">
-                    <div class="contents">
-                        <p class="code-description">
-                            <b>&lt;trmb-create-popup&gt;</b><br/> trmb-create-popup will open the popup with set of the fields base on the type attribute.
-                            <br/><br/><br/><b> Usage Example:</b>
-                        </p>
-                        <code class="code-include">
-                                //Include web components loader and trmb-create-popup polymer component in your page <br/>
+                <div class="grid-x">
+
+                    <div class="small-12 large-4 cell bg-3">
+                        <div class="contents">
+                            <p class="code-description">
+                                <b>&lt;trmb-company-profile&gt;</b><br/> trmb-user-basic will display set of fields with basic user information in single block
+                                <br/><br/><br/><b> Usage Example:</b>
+                            </p>
+                            <code class="code-include">
+                                //Include web components loader and trmb-user-basic polymer component in your page <br/>
                                 &lt;script src="web-components/@webcomponents/webcomponentsjs/webcomponents-loader.js"&gt;&lt;/script&gt;<br/>
-                                &lt;link rel="import" href="web-components/trmb-create-popup/trmb-create-popup.html"&gt;  <br/>
+                                &lt;link rel="import" href="web-components/trmb-form/formGroups/trmb-company-profile.html"&gt;  <br/>
                                 
                             </code>
-                        <code class="code-description">
-                                //For create user popup <br/>
-                                <b>&lt;trmb-create-popup show-popup="false" type="user"&gt;&lt;/trmb-create-popup&gt;</b><br />
-                            </code><br/>
-                        <code class="code-description">
-                                //For create company popup<br/>
-                                <b>&lt;trmb-create-popup show-popup="false" type="company"&gt;&lt;/trmb-create-popup&gt;</b><br />
+                            <code class="code-description">
+                                //Put the tag in your page  <br/>
+                                <b>&lt;trmb-company-profile&gt;&lt;/trmb-company-profile&gt;</b>  <br/>
                             </code>
+                        </div>
+                    </div>
+                    <div class="small-12 large-4 cell bg-2">
+                        <div class="contents">
+                            <trmb-company-profile form-data-string='{"firstName": "bala"}'></trmb-company-profile>
+                        </div>
                     </div>
                 </div>
-                <br/>
-                <input type="button" value="Create user" class="button" onclick="showPopup('create-user-popup')" />
-                <input type="button" value="Create company" class="button" onclick="showPopup('create-company-popup')" />
-                <trmb-create-popup show-popup="false" type="user" id="create-user-popup"></trmb-create-popup>
-                <trmb-create-popup show-popup="false" type="company" id="create-company-popup"></trmb-create-popup>
             </div>
         </li>
+
         <li class="accordion-item" data-accordion-item>
             <!-- Accordion tab title -->
             <a href="#" class="accordion-title">List view component</a>
@@ -373,22 +424,71 @@
 </body>
 
 <script>
+    var config = {
+        "api-url": "https://api-stg.trimble.com/t/trimble.com/profilex-stg/1.0/profilex/user",
+        "api-url2": "https://profilexmock-7204.restdb.io/rest/px-users",
+        "access-token": "c0af68e644794ec9562c58113a59f75",
+        "x-apikey": "5a1e78707814ac5b3a05f49c",
+        "user-trn-id": "",
+        "company-trn-id": ""
+    }
+
+    var components = ['trmb-create-popup', 'trmb-user-basic', 'trmb-user-profile'];
+
     $(document).ready(function() {
         $(document).foundation();
+        /*document.getElementById('api-url').setAttribute("value", config['api-url']);
+        document.getElementById('access-token').setAttribute("value", config['access-token']);
+        document.getElementById('api-url2').setAttribute("value", config['api-url2']);
+        document.getElementById('x-apikey').setAttribute("value", config['x-apikey']);
+        document.getElementById('user-trn-id').setAttribute("value", config['user-trn-id']);
+        document.getElementById('company-trn-id').setAttribute("value", config['company-trn-id']);
+        changeConfig();*/
+        //loadSlot('user-custom-form1');
     });
 
-    function loadSlot() {
-        var ls_value = document.getElementById('user-custom-form').getAttribute('load-slot');
-        console.log(ls_value);
+    function changeConfig() {
+        components.forEach(function(tagName) {
+            var compElems = document.getElementsByTagName(tagName);
+            for (var i = 0; i < compElems.length; i++) {
+                var elem = compElems[i];
+                console.log(document.getElementById('api-source').value);
+                if (document.getElementById('api-source').value == 'profilex') {
+                    if (document.getElementById('api-url').value != elem.getAttribute('api-url')) {
+                        elem.setAttribute('api-url', document.getElementById('api-url').value);
+                    }
+                    if (document.getElementById('access-token').value != elem.getAttribute('access-token')) {
+                        elem.setAttribute('access-token', document.getElementById('access-token').value);
+                    }
+                } else {
+                    if (document.getElementById('api-url2').value != elem.getAttribute('api-url')) {
+                        elem.setAttribute('api-url', document.getElementById('api-url2').value);
+                    }
+                    if (document.getElementById('x-apikey').value != elem.getAttribute('x-apikey')) {
+                        elem.setAttribute('x-apikey', document.getElementById('x-apikey').value);
+                    }
+                }
+                if (tagName.indexOf('trmb-user-') != -1 && document.getElementById('user-trn-id').value != elem.getAttribute('resource-id')) {
+                    elem.setAttribute('resource-id', document.getElementById('user-trn-id').value);
+                }
+                if (tagName.indexOf('trmb-company-') != -1 && document.getElementById('company-trn-id').value != elem.getAttribute('resource-id')) {
+                    elem.setAttribute('resource-id', document.getElementById('company-trn-id').value);
+                }
+            }
+        });
+    }
+
+    function loadSlot(id) {
+        var ls_value = document.getElementById(id).getAttribute('load-slot');
+
         if (undefined == ls_value || 'false' == ls_value) {
-            document.getElementById('user-custom-form').setAttribute('load-slot', 'true');
+            document.getElementById(id).setAttribute('load-slot', 'true');
         } else {
-            document.getElementById('user-custom-form').setAttribute('load-slot', 'false');
+            document.getElementById(id).setAttribute('load-slot', 'false');
         }
     }
 
     function showPopup(elem) {
-        console.log(elem);
         document.getElementById(elem).setAttribute('show-popup', true);
     }
 </script>
