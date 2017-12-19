@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <title> Trimble web components</title>
     <script src="web-components/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <link rel="import" href="web-components/trmb-form/trmb-dummy.html">
     <link rel="import" href="web-components/trmb-form/trmb-css-form.html">
@@ -9,6 +10,7 @@
     <link rel="import" href="web-components/trmb-form/formGroups/trmb-user-basic.html">
     <link rel="import" href="web-components/trmb-form/formGroups/trmb-company-profile.html">
     <link rel="import" href="web-components/trmb-create-popup/trmb-create-popup.html">
+    <link rel="import" href="web-components/trmb-create-popup/trmb-invite-user.html">
     <link rel="import" href="web-components/trmb-list-view/trmb-list-view.html">
     <link rel="stylesheet" href="web-components/trmb-css/dist/css/xy-grid.min.css">
     <link rel="stylesheet" href="foundation/css/foundation.min.css">
@@ -280,8 +282,10 @@
                 <br/>
                 <input type="button" value="Create user" class="button" onclick="showPopup('create-user-popup')" />
                 <input type="button" value="Create company" class="button" onclick="showPopup('create-company-popup')" />
+                <input type="button" value="Invite user" class="button" onclick="showPopup('invite-user-popup')" />
                 <trmb-create-popup show-popup="false" type="user" id="create-user-popup" access-token=""></trmb-create-popup>
                 <trmb-create-popup show-popup="false" type="company" id="create-company-popup"></trmb-create-popup>
+                <trmb-invite-user show-popup="false" type="user" id="invite-user-popup" access-token=""></trmb-invite-user>
             </div>
         </li>
 
