@@ -217,7 +217,7 @@
             </div>
         </li>
 
-        <!--li class="accordian-item" data-accordion-item>
+        <li class="accordian-item" data-accordion-item>
 
             <a href="#" class="accordion-title" onclick="loadSlot('user-custom-form1')">Pre-defined configuration</a>
             <div class="accordion-content" data-tab-content>
@@ -231,15 +231,16 @@
 
                                     <label>Tpaas access token</label>
                                     <input type="text" value="" id="access-token"></br>
-                                    <label>API Url 2:</label>
+                                    <input type="hidden" id="api-source" value="profilex" />
+                                    <!--label>API Url 2:</label>
                                     <input type="text" value="" id="api-url2"></br>
                                     <label>X-Api Token:</label>
-                                    <input type="text" value="" id="x-apikey"></br>
-                                    <label>Which api:</label>
+                                    <input type="text" value="" id="x-apikey"></br!-->
+                                    <!--label>Which api:</label>
                                     <select id="api-source">
                                         <option value="profilex-mock">Profilex Mock</option>
                                         <option value="profilex">Profilex</option>
-                                    </select>
+                                    </select !-->
                                     <label>User trn id</label>
                                     <input type="text" value="" id="user-trn-id">
                                     <label>Company trn id</label>
@@ -252,7 +253,7 @@
                     </div>
                 </div>
             </div>
-        </li!-->
+        </li>
 
         <li class="accordion-item" data-accordion-item>
             <!-- Accordion tab title -->
@@ -433,9 +434,10 @@
 
 <script>
     var config = {
-        "api-url": "https://api-stg.trimble.com/t/trimble.com/profilex-stg/1.0/profilex/user",
+        //"api-url": "https://api-stg.trimble.com/t/trimble.com/profilex-stg/1.0/profilex/user",
+        "api-url": "https://api-stg.trimble.com/t/trimble.com/profxgreen/1.0/",
         "api-url2": "https://profilexmock-7204.restdb.io/rest/px-users",
-        "access-token": "c0af68e644794ec9562c58113a59f75",
+        "access-token": "5bdfdb82425832ef13577d9e5cae5e",
         "x-apikey": "5a1e78707814ac5b3a05f49c",
         "user-trn-id": "",
         "company-trn-id": ""
@@ -445,13 +447,13 @@
 
     $(document).ready(function() {
         $(document).foundation();
-        /*document.getElementById('api-url').setAttribute("value", config['api-url']);
+        document.getElementById('api-url').setAttribute("value", config['api-url']);
         document.getElementById('access-token').setAttribute("value", config['access-token']);
-        document.getElementById('api-url2').setAttribute("value", config['api-url2']);
-        document.getElementById('x-apikey').setAttribute("value", config['x-apikey']);
+        /*document.getElementById('api-url2').setAttribute("value", config['api-url2']);
+        document.getElementById('x-apikey').setAttribute("value", config['x-apikey']);*/
         document.getElementById('user-trn-id').setAttribute("value", config['user-trn-id']);
         document.getElementById('company-trn-id').setAttribute("value", config['company-trn-id']);
-        changeConfig();*/
+        changeConfig();
         //loadSlot('user-custom-form1');
     });
 
@@ -460,10 +462,10 @@
             var compElems = document.getElementsByTagName(tagName);
             for (var i = 0; i < compElems.length; i++) {
                 var elem = compElems[i];
-                console.log(document.getElementById('api-source').value);
                 if (document.getElementById('api-source').value == 'profilex') {
                     if (document.getElementById('api-url').value != elem.getAttribute('api-url')) {
-                        elem.setAttribute('api-url', document.getElementById('api-url').value);
+                        var postfix = ((undefined == elem.getAttribute('type')) ? '' : elem.getAttribute('type'));
+                        elem.setAttribute('api-url', document.getElementById('api-url').value + postfix);
                     }
                     if (document.getElementById('access-token').value != elem.getAttribute('access-token')) {
                         elem.setAttribute('access-token', document.getElementById('access-token').value);
