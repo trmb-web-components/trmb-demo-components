@@ -1,0 +1,20 @@
+{
+  "nodeVersion": "v8.9.3",
+  "modulesFolders": [
+    "web-components"
+  ],
+  "flags": [
+    "flat"
+  ],
+  "linkedModules": [],
+  "topLevelPatterns": [
+    "@polymer/polymer@^2.3.1",
+    "@webcomponents/webcomponentsjs@^1.0.20"
+  ],
+  "lockfileEntries": {
+    "@polymer/polymer@^2.3.1": "https://registry.yarnpkg.com/@polymer/polymer/-/polymer-2.3.1.tgz#1300123c5060bdc75b32dd3ed986abca25482000",
+    "@webcomponents/webcomponentsjs@^1.0.20": "https://registry.yarnpkg.com/@webcomponents/webcomponentsjs/-/webcomponentsjs-1.0.20.tgz#bac97c9709a3130241da4c2c85710e1dc8775b1c"
+  },
+  "files": [],
+  "artifacts": {}
+}

@@ -29,7 +29,7 @@
             background: #F3F3F7;
             box-sizing: border-box;
         }
-        
+
         .demo-top-bar {
             background: #fff;
             height: 50px;
@@ -38,46 +38,46 @@
             padding: 13px 10px 0 20px;
             box-sizing: border-box;
         }
-        
+
         h1 {
             font-size: 16px;
         }
-        
+
         .bg-1 {
             background-color: #EAEAEF;
         }
-        
+
         .bg-2 {
             background-color: #E2E2E7;
         }
-        
+
         .bg-3 {
             background-color: #D0D0D7;
         }
-        
+
         .contents {
             padding: 15px;
         }
-        
+
         .accordion {
             margin-left: 0;
             padding: 0;
             background: #fefefe;
             list-style-type: none;
         }
-        
+
         .accordion[disabled] .accordion-title {
             cursor: not-allowed;
         }
-        
+
         .accordion-item:first-child> :first-child {
             border-radius: 3px 3px 0 0;
         }
-        
+
         .accordion-item:last-child> :last-child {
             border-radius: 0 0 3px 3px;
         }
-        
+
         .accordion-title {
             position: relative;
             display: block;
@@ -90,17 +90,17 @@
             color: #0D6AA8;
             text-decoration: none
         }
-        
+
          :last-child:not(.is-active)>.accordion-title {
             border-bottom: 1px solid #e6e6e6;
             border-radius: 0 0 3px 3px;
         }
-        
+
         .accordion-title:hover,
         .accordion-title:focus {
             background-color: #e6e6e6;
         }
-        
+
         .accordion-title::before {
             position: absolute;
             top: 50%;
@@ -108,11 +108,11 @@
             margin-top: -0.5rem;
             content: '+';
         }
-        
+
         .is-active>.accordion-title::before {
             content: '\2013';
         }
-        
+
         .accordion-content {
             display: none;
             padding: 1rem;
@@ -121,11 +121,11 @@
             background-color: #fefefe;
             color: #0a0a0a;
         }
-        
+
          :last-child>.accordion-content:last-child {
             border-bottom: 1px solid #e6e6e6;
         }
-        
+
         .button {
             display: inline-block;
             vertical-align: middle;
@@ -143,11 +143,11 @@
             background-color: #1779ba;
             color: #fefefe;
         }
-        
+
         .code-description {
             color: darkblue;
         }
-        
+
         .code-include {
             color: darkcyan;
         }
@@ -271,7 +271,7 @@
                                 //Include web components loader and trmb-create-popup polymer component in your page <br/>
                                 &lt;script src="web-components/@webcomponents/webcomponentsjs/webcomponents-loader.js"&gt;&lt;/script&gt;<br/>
                                 &lt;link rel="import" href="web-components/trmb-create-popup/trmb-create-popup.html"&gt;  <br/>
-                                
+
                             </code>
                         <code class="code-description">
                                 //For create user popup <br/>
@@ -311,7 +311,7 @@
                                 //Include web components loader and trmb-user-profile polymer component in your page <br/>
                                 &lt;script src="web-components/@webcomponents/webcomponentsjs/webcomponents-loader.js"&gt;&lt;/script&gt;<br/>
                                 &lt;link rel="import" href="web-components/trmb-form/trmb-user-profile.html"&gt;  <br/>
-                                
+
                             </code>
                             <code class="code-description">
                                 //Put the tag in your page  <br/>
@@ -346,7 +346,7 @@
                                 //Include web components loader and trmb-user-basic polymer component in your page <br/>
                                 &lt;script src="web-components/@webcomponents/webcomponentsjs/webcomponents-loader.js"&gt;&lt;/script&gt;<br/>
                                 &lt;link rel="import" href="web-components/trmb-form/formGroups/trmb-user-basic.html"&gt;  <br/>
-                                
+
                             </code>
                             <code class="code-description">
                                 //Put the tag in your page  <br/>
@@ -381,7 +381,7 @@
                                 //Include web components loader and trmb-user-basic polymer component in your page <br/>
                                 &lt;script src="web-components/@webcomponents/webcomponentsjs/webcomponents-loader.js"&gt;&lt;/script&gt;<br/>
                                 &lt;link rel="import" href="web-components/trmb-form/formGroups/trmb-company-profile.html"&gt;  <br/>
-                                
+
                             </code>
                             <code class="code-description">
                                 //Put the tag in your page  <br/>
@@ -415,7 +415,7 @@
                                 //Include web components loader and trmb-list-view polymer component in your page <br/>
                                 &lt;script src="web-components/@webcomponents/webcomponentsjs/webcomponents-loader.js"&gt;&lt;/script&gt;<br/>
                                 &lt;link rel="import" href="web-components/trmb-list-view/trmb-list-view.html"&gt;  <br/>
-                                
+
                             </code>
                         <code class="code-description">
                                 //For list view <br/>
@@ -428,6 +428,7 @@
             </div>
         </li>
     </ul>
+    <trmb-event-listener></trmb-event-listener>
 
 
 </body>
@@ -437,8 +438,8 @@
         //"api-url": "https://api-stg.trimble.com/t/trimble.com/profilex-stg/1.0/profilex/user",
         "api-url": "https://api-stg.trimble.com/t/trimble.com/profilex-green/1.0/",
         "api-url2": "https://profilexmock-7204.restdb.io/rest/px-users",
-        "access-token": "cc56ee45d0fb617ad8e16ed49e451e34",
-        "x-apikey": "5a1e78707814ac5b3a05f49c",
+        "access-token": "48ba1c9271f71cb682d3c943f0d82245",
+        "x-apikey": "6a72ac70d01c1d9a533cffcc8ad13f1",
         "user-trn-id": "",
         "company-trn-id": ""
     }
@@ -501,6 +502,9 @@
     function showPopup(elem) {
         document.getElementById(elem).setAttribute('show-popup', true);
     }
+    document.querySelector('trmb-event-listener').addEventListener('kick', function(e) {
+        console.log(e.detail.kicked); // true
+    });
 </script>
 
 </html>
